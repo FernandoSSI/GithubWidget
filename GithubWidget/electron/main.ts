@@ -1,4 +1,4 @@
-import { app, BrowserWindow } from 'electron'
+import { app, BrowserWindow, Menu } from 'electron'
 import { createRequire } from 'node:module'
 import { fileURLToPath } from 'node:url'
 import path from 'node:path'
@@ -28,7 +28,11 @@ let win: BrowserWindow | null
 
 function createWindow() {
   win = new BrowserWindow({
-    icon: path.join(process.env.VITE_PUBLIC, 'electron-vite.svg'),
+    icon: path.join(process.env.VITE_PUBLIC, 'github-icon-2.svg'),
+    resizable: false,
+    width: 500,
+    height: 660,
+    
     webPreferences: {
       preload: path.join(__dirname, 'preload.mjs'),
     },
@@ -45,6 +49,8 @@ function createWindow() {
     // win.loadFile('dist/index.html')
     win.loadFile(path.join(RENDERER_DIST, 'index.html'))
   }
+
+  Menu.setApplicationMenu(null);
 }
 
 // Quit when all windows are closed, except on macOS. There, it's common
