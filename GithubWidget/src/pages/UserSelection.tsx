@@ -1,6 +1,4 @@
-import { ChangeEvent, useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/electron-vite.animate.svg'
+import { useState } from 'react'
 import './UserSelection.css'
 import axios from 'axios';
 import { GoCheck, GoX } from "react-icons/go";
@@ -43,12 +41,16 @@ function UserSelection() {
               <img src={profilePic} alt="" id='userImg' />
               <p>is this you?</p>
               <div>
-                <button id='confirmUser'><GoCheck /></button> <button id='denyUser' onClick={e => setProfilePic('')}><GoX /></button>
+                <button id='confirmUser'><GoCheck /></button> <button id='denyUser' onClick={() => setProfilePic('')}><GoX /></button>
               </div>
 
             </div>
 
           </>
+        }
+
+        {
+          error != '' && <p>{error} !</p>
         }
       </div>
     </>

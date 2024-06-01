@@ -1,80 +1,79 @@
-
 #usernameIpt {
-    width: 200px;
-    height: 40px;
-    margin-top: 20px;
-    border-radius: 15px 0 0 15px;
-    border: none;
-    background-color: rgb(83, 83, 83);
-    font-size: 15px;
-    padding: 0;
-    padding-left: 12px;
-  }
-  
-  #usernameIpt::placeholder {
-    color: rgb(214, 214, 214);
-  }
-  
-  #usernameIpt:focus {
-    outline: none;
-    transition: 1s;
-    border: none;
-  }
-  
-  #confirmNickBtn{
-    height: 40px;
-    background-color: rgb(83, 83, 83);
-    border: none;
-    border-left: 1px solid rgb(114, 114, 114);
-    border-radius: 0 15px 15px 0;
-    padding: 10px;
-    text-align: center;
-    cursor: pointer;
-  }
-  
-  #confirmNickBtn:hover{
-    background: #b3b3b379;
-    transition: 0.5s;
-  }
+  width: 200px;
+  height: 40px;
+  margin-top: 20px;
+  border-radius: 15px 0 0 15px;
+  border: none;
+  background-color: rgb(83, 83, 83);
+  font-size: 15px;
+  padding: 0;
+  padding-left: 12px;
+}
 
-  #imgContent{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    
-  }
-  
-  #userImg{
-    margin-top: 40px;
-    width: 200px;
-    border-radius: 50%;
-    border: 1px solid #5c5c5c;
-  }
-  
-  #confirmUser{
-    width: 40px;
-    height: 30px;
-    background-color: rgb(95, 170, 118);
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  #confirmUser:hover{
-    background-color: rgba(70, 175, 135, 0.897);
-    transition: 0.5s;
-  }
-  
-  #denyUser{
-    width: 40px;
-    height: 30px;
-    background-color: rgb(170, 95, 95);
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  #denyUser:hover{
-    background-color: rgb(175, 70, 70);
-    transition: 0.5s;
-  }
+#usernameIpt::placeholder {
+  color: rgb(214, 214, 214);
+}
+
+#usernameIpt:focus {
+  outline: none;
+  transition: 1s;
+  border: none;
+}
+
+#confirmNickBtn {
+  height: 40px;
+  background-color: rgb(83, 83, 83);
+  border: none;
+  border-left: 1px solid rgb(114, 114, 114);
+  border-radius: 0 15px 15px 0;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+}
+
+#confirmNickBtn:hover {
+  background: #b3b3b379;
+  transition: 0.5s;
+}
+
+#imgContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+#userImg {
+  margin-top: 40px;
+  width: 200px;
+  border-radius: 50%;
+  border: 1px solid #5c5c5c;
+}
+
+#confirmUser {
+  width: 40px;
+  height: 30px;
+  background-color: rgb(95, 170, 118);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#confirmUser:hover {
+  background-color: rgba(70, 175, 135, 0.897);
+  transition: 0.5s;
+}
+
+#denyUser {
+  width: 40px;
+  height: 30px;
+  background-color: rgb(170, 95, 95);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#denyUser:hover {
+  background-color: rgb(175, 70, 70);
+  transition: 0.5s;
+}

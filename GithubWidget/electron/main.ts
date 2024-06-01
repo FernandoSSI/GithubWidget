@@ -1,4 +1,4 @@
-import { app, BrowserWindow, Menu } from 'electron'
+import { app, BrowserWindow, Menu} from 'electron'
 import { createRequire } from 'node:module'
 import { fileURLToPath } from 'node:url'
 import path from 'node:path'
@@ -27,12 +27,14 @@ process.env.VITE_PUBLIC = VITE_DEV_SERVER_URL ? path.join(process.env.APP_ROOT, 
 let win: BrowserWindow | null
 
 function createWindow() {
+ 
   win = new BrowserWindow({
-    icon: path.join(process.env.VITE_PUBLIC, 'github-icon-2.svg'),
+    icon: path.join(__dirname, 'githubIcon.png'),
     resizable: false,
     width: 500,
     height: 660,
     
+
     webPreferences: {
       preload: path.join(__dirname, 'preload.mjs'),
     },
