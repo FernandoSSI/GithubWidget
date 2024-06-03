@@ -3,7 +3,11 @@ import './UserSelection.css'
 import axios from 'axios';
 import { GoCheck, GoX } from "react-icons/go";
 
-function UserSelection() {
+interface props {
+  openStreak: any;
+}
+
+function UserSelection({openStreak} : props) {
   const [username, setUsername] = useState('');
   const [profilePic, setProfilePic] = useState('');
   const [error, setError] = useState('');
@@ -18,16 +22,14 @@ function UserSelection() {
     } catch (error) {
       setError('Usuário não encontrado');
     }
-  };
-
-  const cancel = () => {
-    setProfilePic('');
   }
 
+  const openStreakPage = () => {
+    openStreak()
+  };
 
   return (
     <>
-      {/*<img src="https://github-readme-streak-stats.herokuapp.com/?user=FernandoSSI&theme=tokyonight" alt="" />*/}
       <div id='UserSelectionContainer'>
 
         <h2>Hi, welcome to your github widget!</h2>
@@ -41,7 +43,7 @@ function UserSelection() {
               <img src={profilePic} alt="" id='userImg' />
               <p>is this you?</p>
               <div>
-                <button id='confirmUser'><GoCheck /></button> <button id='denyUser' onClick={() => setProfilePic('')}><GoX /></button>
+                <button id='confirmUser' onClick={openStreakPage}><GoCheck /></button> <button id='denyUser' onClick={() => setProfilePic('')}><GoX /></button>
               </div>
 
             </div>

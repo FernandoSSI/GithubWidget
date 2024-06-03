@@ -1,0 +1,13 @@
+#streakContainer{
+    margin-bottom: 0;
+    padding: 0;
+    background-color: transparent;
+    -webkit-app-region: drag;
+}
+
+#streakImg{
+    width: 100%;
+    
+    height: auto;
+    -webkit-app-region: drag;
+}
