@@ -7,7 +7,7 @@ interface props {
   openStreak: any;
 }
 
-function UserSelection({openStreak} : props) {
+function UserSelection({ openStreak }: props) {
   const [username, setUsername] = useState('');
   const [profilePic, setProfilePic] = useState('');
   const [error, setError] = useState('');
@@ -31,6 +31,7 @@ function UserSelection({openStreak} : props) {
   return (
     <>
       <div id='UserSelectionContainer'>
+
         <h2>Github widget</h2>
         <input type="text" placeholder='Username' id='usernameIpt' onChange={e => setUsername(e.target.value)} />
         <button id='confirmNickBtn' onClick={handleSubmit}><GoCheck /></button>
@@ -39,11 +40,17 @@ function UserSelection({openStreak} : props) {
           profilePic != '' && <>
             <div id='imgContent'>
               <img src={profilePic} alt="" id='userImg' />
-              <p>is this you?</p>
+
               <div>
+                <select name="" id="selectTheme">
+                  <option value="default">default</option>
+                  <option value="tokyoNight">tokyo night</option>
+                </select>
+
+              </div>
+              <div id='confirmDiv'>
                 <button id='confirmUser' onClick={openStreakPage}><GoCheck /></button> <button id='denyUser' onClick={() => setProfilePic('')}><GoX /></button>
               </div>
-
             </div>
 
           </>

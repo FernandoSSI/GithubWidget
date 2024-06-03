@@ -2,7 +2,7 @@
   width: 200px;
   height: 40px;
   margin-top: 20px;
-  border-radius: 15px 0 0 15px;
+  border-radius: 10px 0 0 10px;
   border: none;
   background-color: rgb(83, 83, 83);
   font-size: 15px;
@@ -25,7 +25,7 @@
   background-color: rgb(83, 83, 83);
   border: none;
   border-left: 1px solid rgb(114, 114, 114);
-  border-radius: 0 15px 15px 0;
+  border-radius: 0 10px 10px 0;
   padding: 10px;
   text-align: center;
   cursor: pointer;
@@ -45,9 +45,13 @@
 
 #userImg {
   margin-top: 40px;
-  width: 200px;
+  width: 150px;
   border-radius: 50%;
   border: 1px solid #5c5c5c;
+}
+
+#confirmDiv{
+  margin-top: 70px;
 }
 
 #confirmUser {
@@ -76,4 +80,22 @@
 #denyUser:hover {
   background-color: rgb(175, 70, 70);
   transition: 0.5s;
+}
+
+#selectTheme{
+  width: 150px;
+  height: 30px;
+  margin-top: 20px;
+  border-radius: 5px;
+  border: none;
+  background-color: rgb(83, 83, 83);
+  font-size: 15px;
+  padding: 0;
+  padding-left: 12px;
+}
+
+#selectTheme:focus {
+  outline: none;
+  transition: 1s;
+  border: none;
 }

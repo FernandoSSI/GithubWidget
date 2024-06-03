@@ -31,7 +31,7 @@ function createWindow() {
 
   win = new BrowserWindow({
     icon: path.join(__dirname, 'githubIcon.png'),
-    width: 400,
+    width: 350,
     height: 500,
     show: false,
     frame: false,
@@ -79,21 +79,13 @@ app.on('ready', () => {
 
   tray = new Tray(path.join(__dirname, 'githubIcon.png'))
 
-  tray.on('click', (event, bounds)=>{
+  tray.on('click', ()=>{
 
-    const {x, y} = bounds
-    const {height, width} = win!.getBounds()
 
     if(win?.isVisible()){
       win.hide()
     } else {
-      const yPosition = process.platform === 'darwin' ? y : y - height
-      win!.setBounds({
-        x: x - width/2,
-        y: yPosition,
-        height,
-        width,
-      })
+
       win!.show() 
     }
   })

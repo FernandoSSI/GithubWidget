@@ -12,3 +12,23 @@
     height: auto;
     -webkit-app-region: drag;
 }
+
+#titleBar{
+    height: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    z-index: 100;
+    position: fixed;
+    -webkit-app-region: no-drag;
+}
+
+#close{
+    margin-right: 5px;
+    margin-top: 2px;
+}
+
+#gear{
+    margin-right: 8px;
+    margin-top: 2px;
+}
