@@ -8,8 +8,9 @@ function App() {
 
   const openStreakPage = () => {
     setCurrentPage('streak');
-    window.resizeTo(400, 164)
-
+    window.resizeTo(400, 158)
+    
+    new Window()
   };
 
   return (

@@ -31,9 +31,7 @@ function UserSelection({openStreak} : props) {
   return (
     <>
       <div id='UserSelectionContainer'>
-
-        <h2>Hi, welcome to your github widget!</h2>
-        <p>Add your github username to get started!</p>
+        <h2>Github widget</h2>
         <input type="text" placeholder='Username' id='usernameIpt' onChange={e => setUsername(e.target.value)} />
         <button id='confirmNickBtn' onClick={handleSubmit}><GoCheck /></button>
 

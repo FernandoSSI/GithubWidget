@@ -3,6 +3,7 @@
     padding: 0;
     background-color: transparent;
     -webkit-app-region: drag;
+    position: fixed;
 }
 
 #streakImg{
