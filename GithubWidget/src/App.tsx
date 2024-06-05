@@ -5,19 +5,19 @@ import Streak from './pages/Streak';
 
 function App() {
   const [currentPage, setCurrentPage] = useState<'first' | 'streak'>('first');
+  const [username, setUsername] = useState('')
+  const [theme, setTheme] = useState('')
 
   const openStreakPage = () => {
     setCurrentPage('streak');
-    window.resizeTo(400, 158)
-    
-    new Window()
+    window.resizeTo(400, 183)
   };
 
   return (
     <>
       <div id='mainContainer'>
-        {currentPage == 'first' && <UserSelection openStreak={openStreakPage} />}
-        {currentPage == 'streak' && <Streak />}
+        {currentPage == 'first' && <UserSelection openStreak={openStreakPage} setUser={setUsername} />}
+        {currentPage == 'streak' && <Streak user={username} theme={theme} />}
       </div>
     </>
   )

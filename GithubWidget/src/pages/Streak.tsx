@@ -1,17 +1,31 @@
 import { GoGear, GoX } from 'react-icons/go'
 import './Streak.css'
+import { useState } from 'react'
 
-const Streak = () => {
+interface props{
+  user: string,
+  theme: string
+}
+
+const Streak = ({user, theme}: props) => {
+
+  const url = "https://streak-stats.demolab.com/?user=" + user + "&hide_border=true&theme=" + theme 
+
 
   return (
-    <div id='streakContainer'>
-        
-        <div id='titleBar'>
-          <span id='gear' ><GoGear/></span>
-          <span id='close' onClick={close}><GoX/></span>
-        </div>
-        <img src="https://streak-stats.demolab.com/?user=FernandoSSI&hide_border=true&theme=tokyonight&locale=pt_BR" alt="" id='streakImg'/>
-    </div>
+    <>
+      <div id='titleBar'>
+        <span id='blank'></span>
+        <span id='gear' ><GoGear /></span>
+        <span id='close' onClick={close}> <GoX /></span>
+      </div>
+
+      <div id='streakContainer'>
+        <img src= {url} alt="" id='streakImg' />
+      </div>
+
+    </>
+
   )
 }
 

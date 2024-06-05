@@ -1,9 +1,7 @@
-import { app, BrowserWindow, ipcMain, Menu, Tray } from 'electron'
-import { createRequire } from 'node:module'
+import { app, BrowserWindow, Menu, Tray } from 'electron'
 import { fileURLToPath } from 'node:url'
 import path from 'node:path'
 
-const require = createRequire(import.meta.url)
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
 // The built directory structure
@@ -32,9 +30,10 @@ function createWindow() {
   win = new BrowserWindow({
     icon: path.join(__dirname, 'githubIcon.png'),
     width: 350,
-    height: 500,
+    height: 525,
     show: false,
     frame: false,
+    resizable: false,
 
     webPreferences: {
       preload: path.join(__dirname, 'preload.mjs'),
@@ -66,6 +65,7 @@ app.on('window-all-closed', () => {
   }
 })
 
+
 app.on('activate', () => {
   if (BrowserWindow.getAllWindows().length === 0) {
     createWindow()
@@ -81,13 +81,23 @@ app.on('ready', () => {
 
   tray.on('click', ()=>{
 
-
     if(win?.isVisible()){
       win.hide()
     } else {
 
       win!.show() 
     }
+  })
+
+  tray.on('right-click', ()=>{
+    const menuConfig = Menu.buildFromTemplate([
+      {
+        label: 'Quit',
+        click: () => app.quit()
+      }
+    ])
+
+    tray?.popUpContextMenu(menuConfig)
   })
 
 })

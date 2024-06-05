@@ -5,9 +5,10 @@ import { GoCheck, GoX } from "react-icons/go";
 
 interface props {
   openStreak: any;
+  setUser: any
 }
 
-function UserSelection({ openStreak }: props) {
+function UserSelection({ openStreak, setUser }: props) {
   const [username, setUsername] = useState('');
   const [profilePic, setProfilePic] = useState('');
   const [error, setError] = useState('');
@@ -19,6 +20,7 @@ function UserSelection({ openStreak }: props) {
     try {
       const response = await axios.get(`https://api.github.com/users/${username}`);
       setProfilePic(response.data.avatar_url);
+      setUser(username)
     } catch (error) {
       setError('Usuário não encontrado');
     }
@@ -30,6 +32,11 @@ function UserSelection({ openStreak }: props) {
 
   return (
     <>
+
+      <div id='titleBar'>
+        <span id='blank'></span>
+        <span id='close' onClick={close}> <GoX /></span>
+      </div>
       <div id='UserSelectionContainer'>
 
         <h2>Github widget</h2>
