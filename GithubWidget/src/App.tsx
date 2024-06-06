@@ -8,16 +8,23 @@ function App() {
   const [username, setUsername] = useState('')
   const [theme, setTheme] = useState('')
 
-  const openStreakPage = () => {
-    setCurrentPage('streak');
-    window.resizeTo(400, 183)
+  const handlePage = () => {
+    if(currentPage == 'first'){
+      setCurrentPage('streak');
+      window.resizeTo(400, 183)
+    } else {
+      setCurrentPage('first');
+      window.resizeTo(350, 525)
+    }
+
+   
   };
 
   return (
     <>
       <div id='mainContainer'>
-        {currentPage == 'first' && <UserSelection openStreak={openStreakPage} setUser={setUsername} setTheme={setTheme} />}
-        {currentPage == 'streak' && <Streak user={username} theme={theme} />}
+        {currentPage == 'first' && <UserSelection openStreak={handlePage} setUser={setUsername} setTheme={setTheme} user={username}/>}
+        {currentPage == 'streak' && <Streak user={username} theme={theme} openConfig = {handlePage} />}
       </div>
     </>
   )

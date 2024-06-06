@@ -35,4 +35,5 @@
 #gear{
     margin-right: 8px;
     margin-top: 2px;
+    cursor: pointer;
 }
