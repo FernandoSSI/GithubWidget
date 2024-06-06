@@ -16,7 +16,7 @@ function App() {
   return (
     <>
       <div id='mainContainer'>
-        {currentPage == 'first' && <UserSelection openStreak={openStreakPage} setUser={setUsername} />}
+        {currentPage == 'first' && <UserSelection openStreak={openStreakPage} setUser={setUsername} setTheme={setTheme} />}
         {currentPage == 'streak' && <Streak user={username} theme={theme} />}
       </div>
     </>

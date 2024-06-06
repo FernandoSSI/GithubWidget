@@ -6,9 +6,10 @@ import { GoCheck, GoX } from "react-icons/go";
 interface props {
   openStreak: any;
   setUser: any
+  setTheme: any
 }
 
-function UserSelection({ openStreak, setUser }: props) {
+function UserSelection({ openStreak, setUser, setTheme }: props) {
   const [username, setUsername] = useState('');
   const [profilePic, setProfilePic] = useState('');
   const [error, setError] = useState('');
@@ -49,7 +50,7 @@ function UserSelection({ openStreak, setUser }: props) {
               <img src={profilePic} alt="" id='userImg' />
 
               <div>
-                <select name="" id="selectTheme">
+                <select name="" id="selectTheme" onChange={(e:React.ChangeEvent<HTMLSelectElement>) => setTheme(e.target.value)}>
                   <option value="default">default</option>
                   <option value="tokyoNight">tokyo night</option>
                 </select>
