@@ -1,10 +1,14 @@
+#containerMainView{
+  display: flex;
+}
+
 #usernameIpt {
-  width: 200px;
+  width: 240px;
   height: 40px;
-  margin-top: 20px;
+  margin-top: 40px;
   border-radius: 10px 0 0 10px;
   border: none;
-  background-color: rgb(83, 83, 83);
+  background-color: #2E3440;
   font-size: 15px;
   padding: 0;
   padding-left: 12px;
@@ -22,13 +26,14 @@
 
 #confirmNickBtn {
   height: 40px;
-  background-color: rgb(83, 83, 83);
+  background-color: #2E3440;
   border: none;
   border-left: 1px solid rgb(114, 114, 114);
-  border-radius: 0 10px 10px 0;
+  border-radius: 0 10px 10px  0;
   padding: 10px;
   text-align: center;
   cursor: pointer;
+  box-sizing: border-box;
 }
 
 #confirmNickBtn:hover {
@@ -40,14 +45,25 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 40%;
 
+}
+
+#UserSelectionContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60%;
+}
+
+#inputContainer{
+  
 }
 
 #userImg {
   margin-top: 40px;
-  width: 150px;
+  width: 122px;
   border-radius: 50%;
-  border: 1px solid #5c5c5c;
 }
 
 #confirmDiv{
@@ -55,47 +71,54 @@
 }
 
 #confirmUser {
-  width: 40px;
-  height: 30px;
-  background-color: rgb(95, 170, 118);
+  width: 112px;
+  height: 35px;
+  background-color: #03A959;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  font-weight: bold;
+  margin: 0;
 }
 
 #confirmUser:hover {
-  background-color: rgba(70, 175, 135, 0.897);
-  transition: 0.5s;
+  background-color: #00723b;
+  transition: 0.2s;
 }
 
-#denyUser {
-  width: 40px;
-  height: 30px;
-  background-color: rgb(170, 95, 95);
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-#denyUser:hover {
-  background-color: rgb(175, 70, 70);
-  transition: 0.5s;
-}
 
 #selectTheme{
-  width: 150px;
-  height: 30px;
+  width: 285px;
+  height: 40px;
   margin-top: 20px;
-  border-radius: 5px;
+  border-radius: 10px;
   border: none;
-  background-color: rgb(83, 83, 83);
+  background-color: #2E3440;
   font-size: 15px;
-  padding: 0;
   padding-left: 12px;
+  color: rgb(214, 214, 214);
+}
+
+option {
+  color: rgb(214, 214, 214);
 }
 
 #selectTheme:focus {
   outline: none;
   transition: 1s;
   border: none;
+}
+
+hr {
+  border-color: rgba(255, 255, 255, 0.219);
+  margin-top: 13px;
+  height: 340px;
+}
+
+#nameH2{
+  margin: 0;
+}
+
+#usernameP{
+  margin: 0;
 }

@@ -14,7 +14,7 @@ function App() {
       window.resizeTo(400, 183)
     } else {
       setCurrentPage('first');
-      window.resizeTo(350, 525)
+      window.resizeTo(575, 394)
     }
 
    

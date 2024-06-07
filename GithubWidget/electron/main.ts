@@ -29,8 +29,8 @@ function createWindow() {
 
   win = new BrowserWindow({
     icon: path.join(__dirname, 'githubIcon.png'),
-    width: 350,
-    height: 525,
+    width: 575,
+    height: 394,
     show: false,
     frame: false,
     resizable: false,

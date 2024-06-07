@@ -32,10 +32,10 @@ const Streak = ({ user, theme, openConfig }: Props) => {
       }
     };
 
-    fetchEvents(); // Initial fetch
-    const intervalId = setInterval(fetchEvents, 300000); // Check every 10 minutes
+    fetchEvents(); 
+    const intervalId = setInterval(fetchEvents, 600000); 
 
-    return () => clearInterval(intervalId); // Cleanup interval on component unmount
+    return () => clearInterval(intervalId); 
   }, [user, theme, lastEventId]);
 
   return (
