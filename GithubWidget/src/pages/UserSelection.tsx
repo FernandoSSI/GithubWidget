@@ -6,14 +6,16 @@ import { GoCheck, GoX } from "react-icons/go";
 interface props {
   openStreak: any;
   setUser: any;
-  setTheme: any;
+  setThemeProp: any;
+  themeProp: string;
   user?: string;
 }
 
-function UserSelection({ openStreak, setUser, setTheme, user }: props) {
+function UserSelection({ openStreak, setUser, setThemeProp, themeProp, user }: props) {
   const [username, setUsername] = useState(user);
   const [profilePic, setProfilePic] = useState('');
   const [error, setError] = useState('');
+  const [theme, setTheme] = useState(themeProp);
 
   const fetchProfilePic = async (username: string) => {
     setError('');
@@ -22,7 +24,7 @@ function UserSelection({ openStreak, setUser, setTheme, user }: props) {
     try {
       const response = await axios.get(`https://api.github.com/users/${username}`);
       setProfilePic(response.data.avatar_url);
-      setUser(username);
+      setUser(username)
     } catch (error) {
       setError('Usuário não encontrado');
     }
@@ -32,7 +34,8 @@ function UserSelection({ openStreak, setUser, setTheme, user }: props) {
     if (user) {
       fetchProfilePic(user);
     }
-  }, [user]);
+    setThemeProp(theme)
+  }, [user, theme]);
 
   const handleSubmit = async () => {
     if (username) {
@@ -69,7 +72,8 @@ function UserSelection({ openStreak, setUser, setTheme, user }: props) {
                 <select
                   name=""
                   id="selectTheme"
-                  onChange={(e: React.ChangeEvent<HTMLSelectElement>) => setTheme(e.target.value)}
+                  onChange={e => setTheme(e.target.value)}
+                  value={theme}
                 >
                   <option value="default">default</option>
                   <option value="tokyoNight">tokyo night</option>

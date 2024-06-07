@@ -23,7 +23,7 @@ function App() {
   return (
     <>
       <div id='mainContainer'>
-        {currentPage == 'first' && <UserSelection openStreak={handlePage} setUser={setUsername} setTheme={setTheme} user={username}/>}
+        {currentPage == 'first' && <UserSelection openStreak={handlePage} setUser={setUsername} setThemeProp={setTheme} user={username} themeProp={theme}/>}
         {currentPage == 'streak' && <Streak user={username} theme={theme} openConfig = {handlePage} />}
       </div>
     </>
