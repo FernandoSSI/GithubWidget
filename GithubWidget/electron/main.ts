@@ -34,6 +34,7 @@ function createWindow() {
     show: false,
     frame: false,
     resizable: false,
+    skipTaskbar: true,
 
     webPreferences: {
       preload: path.join(__dirname, 'preload.mjs'),
