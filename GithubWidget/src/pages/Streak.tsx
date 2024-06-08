@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { GoGear, GoX } from 'react-icons/go';
+import { useState, useEffect } from 'react';
+import { GoGear } from 'react-icons/go';
 import './Streak.css';
 
 interface Props {
@@ -43,7 +43,6 @@ const Streak = ({ user, theme, openConfig }: Props) => {
       <div id='titleBar'>
         <span id='blank'></span>
         <span id='gear' onClick={openConfig}><GoGear /></span>
-        <span id='close' onClick={() => window.close()}> <GoX /></span>
       </div>
 
       <div id='streakContainer'>
