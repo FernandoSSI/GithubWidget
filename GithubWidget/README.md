@@ -1,30 +1,26 @@
-# React + TypeScript + Vite
+# Github Widget
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+-Desktop widget, with the aim of counting your commits, and current streak
 
-Currently, two official plugins are available:
+## About the project
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This project was developed with the aim of having a motivating widget that encourages daily commits, showing your current streak of commits.
 
-## Expanding the ESLint configuration
+The widget was developed using typescript, react and electron, and works in the system tray
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Instructions
 
-- Configure the top-level `parserOptions` property like this:
+in the terminal in the project's home folder, use this command to enter the main folder.
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+```bash
+cd GithubWidget
+```
+Then, to test it:
+```bash
+npm run dev
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+- Below I will leave a link to download the program's executable. It will be in the win-unpacked folder of the dist folder. After running the .exe, the icon to open the application will be in the system tray.
+- [program's executable](https://drive.google.com/file/d/1HA1nBLq_mQjkuRtSMaEaqnIGliG-OhOw/view?usp=sharing)
+
+
